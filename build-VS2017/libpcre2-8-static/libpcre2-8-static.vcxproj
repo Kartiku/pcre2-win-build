@@ -21,6 +21,8 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{C89ACB6C-128C-49D9-8C26-0A3F880D37A0}</ProjectGuid>
     <RootNamespace>libpcre2-8-static</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <ProjectName>pcre2-8</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -85,12 +87,16 @@
       <PreprocessorDefinitions>PCRE2_STATIC;WIN32;_WINDOWS;PCRE2_CODE_UNIT_WIDTH=8;HAVE_CONFIG_H;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\..\win32;..\..\src;..\..\src\sljit;..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OmitDefaultLibName>true</OmitDefaultLibName>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -115,6 +121,7 @@
       <PreprocessorDefinitions>PCRE2_STATIC;WIN32;_WINDOWS;PCRE2_CODE_UNIT_WIDTH=8;HAVE_CONFIG_H;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\..\win32;..\..\src;..\..\src\sljit;..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OmitDefaultLibName>true</OmitDefaultLibName>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
