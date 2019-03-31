@@ -2,6 +2,7 @@
 *.log
 *.opensdf
 *.sdf
+*.user
 *~
 /build-*/*/Debug
 /build-*/*/Release
