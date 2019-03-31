@@ -56,7 +56,9 @@ inttypes.h. The existence of these headers is checked by configure or CMake. */
 imported have to be identified as such. When building PCRE2, the appropriate
 export setting is defined in pcre2_internal.h, which includes this file. So we
 don't change existing definitions of PCRE2_EXP_DECL. */
-
+#ifndef PCRE2_STATIC
+#define PCRE2_STATIC
+#endif
 #if defined(_WIN32) && !defined(PCRE2_STATIC)
 #  ifndef PCRE2_EXP_DECL
 #    define PCRE2_EXP_DECL  extern __declspec(dllimport)
