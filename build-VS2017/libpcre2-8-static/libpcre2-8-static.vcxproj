@@ -122,6 +122,7 @@
       <AdditionalIncludeDirectories>..\..\win32;..\..\src;..\..\src\sljit;..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OmitDefaultLibName>true</OmitDefaultLibName>
       <SuppressStartupBanner>false</SuppressStartupBanner>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
